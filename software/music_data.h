@@ -64,6 +64,52 @@ static const music_sequence_t ode_to_joy = {
     .loop = false
 };
 
+/* 一闪一闪亮晶晶 (Twinkle Twinkle Little Star - Full Version) */
+static const music_note_item_t shine_bright_notes[] = {
+    /* 第一段：一闪一闪亮晶晶 */
+    {NOTE_C4, 500}, {NOTE_C4, 500}, {NOTE_G4, 500}, {NOTE_G4, 500},
+    {NOTE_A4, 500}, {NOTE_A4, 500}, {NOTE_G4, 1000},
+    {NOTE_F4, 500}, {NOTE_F4, 500}, {NOTE_E4, 500}, {NOTE_E4, 500},
+    {NOTE_D4, 500}, {NOTE_D4, 500}, {NOTE_C4, 1000},
+    /* 第二段：天上的星星 */
+    {255, 500},
+    {NOTE_G4, 500}, {NOTE_G4, 500}, {NOTE_G4, 500}, {NOTE_G4, 500},
+    {NOTE_A4, 500}, {NOTE_A4, 500}, {NOTE_G4, 1000},
+    {NOTE_F4, 500}, {NOTE_F4, 500}, {NOTE_E4, 500}, {NOTE_E4, 500},
+    {NOTE_D4, 500}, {NOTE_D4, 500}, {NOTE_C4, 1000},
+};
+
+static const music_sequence_t shine_bright = {
+    .notes = shine_bright_notes,
+    .note_count = sizeof(shine_bright_notes) / sizeof(music_note_item_t),
+    .tempo = 120,
+    .loop = false
+};
+
+/* 生日快乐歌 (Happy Birthday Song - Extended Version) */
+static const music_note_item_t happy_birthday_song_notes[] = {
+    /* 第一句：祝你生日快乐 */
+    {NOTE_C4, 400}, {NOTE_C4, 400}, {NOTE_D4, 800},
+    {NOTE_C4, 800}, {NOTE_F4, 800}, {NOTE_E4, 1600},
+    /* 第二句：祝你生日快乐 */
+    {255, 400},
+    {NOTE_C4, 400}, {NOTE_C4, 400}, {NOTE_D4, 800},
+    {NOTE_C4, 800}, {NOTE_G4, 800}, {NOTE_F4, 1600},
+    /* 第三句：祝你生日快乐 */
+    {255, 400},
+    {NOTE_C5, 400}, {NOTE_A4, 400}, {NOTE_F4, 400},
+    {NOTE_E4, 400}, {NOTE_D4, 400}, {NOTE_B4, 800},
+    {NOTE_B4, 400}, {NOTE_A4, 400}, {NOTE_F4, 400},
+    {NOTE_G4, 400}, {NOTE_F4, 800},
+};
+
+static const music_sequence_t happy_birthday_song = {
+    .notes = happy_birthday_song_notes,
+    .note_count = sizeof(happy_birthday_song_notes) / sizeof(music_note_item_t),
+    .tempo = 120,
+    .loop = false
+};
+
 /* 上升音阶 (Scale Up: C4 to C5) */
 static const music_note_item_t scale_up_notes[] = {
     {NOTE_C4, 500}, {NOTE_D4, 500}, {NOTE_E4, 500}, {NOTE_F4, 500},
